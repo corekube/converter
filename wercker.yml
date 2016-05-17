@@ -1,0 +1,17 @@
+build:
+  box: golang
+  # The steps that will be executed in the DEPLOY pipeline
+  steps:
+    # noop
+    - script:
+        name: noop
+        code: |
+          echo
+
+  # Notify slack of build status
+  after-steps:
+    # Notify slack
+    - slack-notifier:
+        url: $SLACK_URL
+        channel: notifications
+        username: $SLACK_USER

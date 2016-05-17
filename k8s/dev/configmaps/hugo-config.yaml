@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hugo-config
+data:
+  hugo.src: "/srv/data/dev.corekube.com/src"
+  hugo.theme: "hugo-multi-bootswatch"
+  hugo.base.url: "dev.corekube.com"
+  hugo.dest: "/srv/data/dev.corekube.com/dest"
