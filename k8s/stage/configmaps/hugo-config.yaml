@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: hugo-config
 data:
-  hugo.src: "/srv/data/stage.corekube.com/src"
+  hugo.src: "/srv/data/stage/src"
   hugo.theme: "hugo-multi-bootswatch"
   hugo.base.url: "stage.corekube.com"
-  hugo.dest: "/srv/data/stage.corekube.com/dest"
+  hugo.dest: "/srv/data/stage/dest"
