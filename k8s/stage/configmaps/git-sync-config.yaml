@@ -6,5 +6,5 @@ data:
   git.sync.repo: "https://github.com/corekube/web"
   git.sync.branch: "dev"
   git.sync.rev: "origin/dev"
-  git.sync.dest: "/srv/data/stage.corekube.com/src"
+  git.sync.dest: "/srv/data/stage/src"
   git.sync.wait: "45"
