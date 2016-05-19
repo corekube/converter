@@ -5,8 +5,6 @@ cat > converter-deployment.yaml << EOF
  kind: Deployment
  metadata:
    name: converter-deployment
-   labels:
-    tag: ${BUILD_COMMIT}
  spec:
    replicas: 1
    template:
