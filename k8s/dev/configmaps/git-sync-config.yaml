@@ -4,7 +4,7 @@ metadata:
   name: git-sync-config
 data:
   git.sync.repo: "https://github.com/corekube/web"
-  git.sync.branch: "dev"
-  git.sync.rev: "origin/dev"
+  git.sync.branch: "master"
+  git.sync.rev: "origin/master"
   git.sync.dest: "/srv/data/dev/src"
   git.sync.wait: "45"
