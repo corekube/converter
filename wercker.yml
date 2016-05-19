@@ -1,10 +1,10 @@
 build:
   box: golang
-  # The steps that will be executed in the DEPLOY pipeline
+  # The steps that will be executed in the build pipeline
   steps:
     # noop
     - script:
-        name: noop
+        name: noop (for now)
         code: |
           echo
 
