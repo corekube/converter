@@ -46,11 +46,7 @@ kubectl --namespace=$NAMESPACE apply -f $CONFIGMAP_FILEPATH
 # apply || replace deployment
 DEPLOYMENT_FILEPATH=k8s/$APP_ENV/deployment/$APP_NAME-deployment.yaml
 pushd k8s/$APP_ENV/deployment > /dev/null
-GIT_SYNC_DOCKER_REPO=$GIT_SYNC_DOCKER_REPO \
-  GIT_SYNC_IMAGE_TAG=$GIT_SYNC_IMAGE_TAG \
-  HUGO_DOCKER_REPO=$HUGO_DOCKER_REPO \
-  HUGO_IMAGE_TAG=$HUGO_IMAGE_TAG \
-  ./create-$APP_NAME-deployment.yaml.sh
+./create-$APP_NAME-deployment.yaml.sh
 popd > /dev/null
 
 if [ "$REPLACE_DEPLOYMENT" = true ] ; then
