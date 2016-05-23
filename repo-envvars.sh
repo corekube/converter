@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# default values are intended for local usage rather than ci/cd env
 export BUILD_COMMIT=${WERCKER_GIT_COMMIT-`git rev-parse HEAD`}
 export APP_NAME=${WERCKER_APPLICATION_NAME-`basename $(git rev-parse --show-toplevel)`}
 export GIT_SYNC_DOCKER_REPO=${GIT_SYNC_DOCKER_REPO-corekube/git-sync}
