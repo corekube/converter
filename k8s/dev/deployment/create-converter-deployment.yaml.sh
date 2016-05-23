@@ -13,6 +13,7 @@ cat > converter-deployment.yaml << EOF
        labels:
          app: converter
          env: dev
+         rev: ${BUILD_COMMIT}
      spec:
        containers:
          - name: git-sync
