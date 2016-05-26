@@ -1,5 +1,5 @@
 build:
-  box: golang
+  box: corekube/basics:0.0.1
   # The steps that will be executed in the build pipeline
   steps:
     # noop
@@ -17,14 +17,11 @@ build:
         username: $SLACK_USER
 
 deploy:
-  box: golang
+  box: corekube/basics:0.0.1
   # The steps that will be executed in the DEPLOY pipeline
 
   # Stage deploy target
   stage:
-    - install-packages:
-      packages: wget openssh-client
-
     - add-ssh-key:
         keyname: KUBERNETES_SSH_KEY
     - add-to-known_hosts:
@@ -38,7 +35,7 @@ deploy:
     - script:
         name: download & setup kubectl
         code: |
-          wget -O /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/f3248247281f663ff4471cce0bc54f01aad59bb6/setup-wercker-kubectl.sh
+          curl -k -s -o /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/f3248247281f663ff4471cce0bc54f01aad59bb6/setup-wercker-kubectl.sh
           chmod +x /tmp/setup-kubectl.sh
           /tmp/setup-kubectl.sh
 
@@ -50,9 +47,6 @@ deploy:
 
   # Prod deploy target
   prod:
-    - install-packages:
-      packages: curl wget openssh-client
-
     - add-ssh-key:
         keyname: KUBERNETES_SSH_KEY
     - add-to-known_hosts:
@@ -66,7 +60,7 @@ deploy:
     - script:
         name: download & setup kubectl
         code: |
-          wget -O /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/f3248247281f663ff4471cce0bc54f01aad59bb6/setup-wercker-kubectl.sh
+          curl -k -s -o /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/f3248247281f663ff4471cce0bc54f01aad59bb6/setup-wercker-kubectl.sh
           chmod +x /tmp/setup-kubectl.sh
           /tmp/setup-kubectl.sh
 
