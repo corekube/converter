@@ -35,7 +35,7 @@ deploy:
     - script:
         name: download & setup kubectl
         code: |
-          curl -k -s -o /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/a57e99e76cb2f71efa6f98c6ac64aed9b6c7d41c/setup-wercker-kubectl.sh
+          curl -s -o /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/a57e99e76cb2f71efa6f98c6ac64aed9b6c7d41c/setup-wercker-kubectl.sh
           chmod +x /tmp/setup-kubectl.sh
           /tmp/setup-kubectl.sh
 
@@ -60,7 +60,7 @@ deploy:
     - script:
         name: download & setup kubectl
         code: |
-          curl -k -s -o /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/a57e99e76cb2f71efa6f98c6ac64aed9b6c7d41c/setup-wercker-kubectl.sh
+          curl -s -o /tmp/setup-kubectl.sh https://gist.githubusercontent.com/metral/ce436c6d70b4324262b8dcbd81ce8f34/raw/a57e99e76cb2f71efa6f98c6ac64aed9b6c7d41c/setup-wercker-kubectl.sh
           chmod +x /tmp/setup-kubectl.sh
           /tmp/setup-kubectl.sh
 
