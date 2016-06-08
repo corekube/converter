@@ -7,6 +7,10 @@ cat > converter-deployment.yaml << EOF
    name: converter-deployment
  spec:
    replicas: 1
+   selector:
+     matchLabels:
+      app: converter
+      env: stage
    template:
      metadata:
        name: converter
