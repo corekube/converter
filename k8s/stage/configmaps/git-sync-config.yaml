@@ -7,4 +7,4 @@ data:
   git.sync.branch: "master"
   git.sync.rev: "origin/master"
   git.sync.dest: "/srv/data/stage/src"
-  git.sync.wait: "45"
+  git.sync.wait: "120"
